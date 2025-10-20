@@ -5,6 +5,7 @@ import importlib
 import os
 import re
 import warnings
+import sys
 
 # Third-party imports
 import dash
@@ -12,6 +13,9 @@ import pandas as pd
 import plotly.express as px
 from dash import callback, dcc, html
 from dash.dependencies import Input, Output
+
+# Config max length for csv read 
+csv.field_size_limit(sys.maxsize)
 
 # Config import
 from dashboard.config import (
